@@ -1,6 +1,19 @@
 
 puts "     Welcome to Annie's Game Stop"
 puts  " Verteran's get 20% off today"
+puts
+inventory_ps3 =   50
+inventory_ps4 =   50
+inventory_xbox360 =   50
+inventory_xboxOne =   50
+puts "PS3 Inventory"  +   inventory_ps3.to_s
+puts
+puts "PS4 Inventory"  +  inventory_ps4.to_s 
+puts
+puts "Xbox 360 Inventory"  +  inventory_xbox360.to_s
+puts
+puts "XboxOne Inventory"  +   inventory_xboxOne.to_s
+puts
 puts "Would you like to buy a game system today?"
 buying = ["yes", "no thank you"]
 types = ["ps3", "ps4", "xbox360", "xboxOne"]
@@ -28,18 +41,22 @@ puts
 puts	
 if game == "ps4"
 	totalps4 = cost_of_ps4 * choose_amount
+		inventory_ps4 -= choose_amount
 	print "$" + totalps4.to_s
 
 elsif game == "ps3"
 	totalps3 = cost_of_ps3 * choose_amount
+	inventory_ps3 -= choose_amount
 	print "$" + totalps3.to_s
 
 elsif game == "xboxOne"
 	totalxboxOne = cost_of_xboxOne * choose_amount
+	inventory_xboxOne -= choose_amount
 	print "$" + totalxboxOne.to_s
 
 elsif game == "xbox360"
 	totalxbox360 = cost_of_xbox360 * choose_amount
+	inventory_xbox360 -= choose_amount
 	print "$" + totalxbox360.to_s	
 #puts " Would you like any other game systems?"
 #puts
@@ -134,7 +151,18 @@ elsif game == "xbox360"
 	print "$" + totalxbox360_with_discount.to_s	
 
 end
+
+
+puts " \n\nPS3 Inventory"  +   inventory_ps3.to_s
+puts
+puts " \n\nPS4 Inventory" +   inventory_ps4.to_s 
+puts
+puts " \n\nXbox 360 Inventory" +  inventory_xbox360.to_s 
+puts
+puts " \n\nXboxOne Inventory" +  inventory_xboxOne.to_s 
+puts
 end
+
 #puts choose_amount
 #puts
 #puts game
@@ -162,6 +190,7 @@ end
 #reciept_total = game_one_total.to_s + extra_type_total.to_s
 
 #print reciept_total
+
 
 
 
