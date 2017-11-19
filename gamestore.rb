@@ -94,6 +94,47 @@ end
 
 
 
+if customer_choice == "yes"
+
+puts " \n\nYour 20% discount is " "$"
+
+if game == "ps4"
+	totalps4_discount = cost_of_ps4 * choose_amount *0.20
+	print "$" + totalps4_discount.to_s
+
+elsif game == "ps3"
+	totalps3_discount = cost_of_ps3 * choose_amount *0.20 
+	print "$" + totalps3_discount.to_s
+
+elsif game == "xboxOne"
+	totalxboxOne_discount = cost_of_xboxOne * choose_amount *0.20
+	print "$" + totalxboxOne_discount.to_s
+
+elsif game == "xbox360"
+	totalxbox360_discount = cost_of_xbox360 * choose_amount *0.20
+	print "$" + totalxbox360_discount.to_s	
+end
+puts
+puts "\n\n For a total of"
+
+if game == "ps4"
+	totalps4_with_discount = cost_of_ps4 - totalps4_discount
+	print "$" + totalps4_with_discount.to_s  
+
+elsif game == "ps3"
+	totalps3_with_discount = cost_of_ps3 - totalps3_discount
+	print "$" + totalps3_with_discount.to_s
+
+elsif game == "xboxOne"
+	totalxboxOne_with_discount = cost_of_xboxOne - totalxboxOne_discount
+	print "$" + totalxboxOne_with_discount.to_s
+
+elsif game == "xbox360"
+	totalxbox360_with_discount = cost_of_xbox360 - totalxbox360_discount
+	print "$" + totalxbox360_with_discount.to_s	
+
+end
+end
 #puts choose_amount
 #puts
 #puts game
@@ -121,5 +162,7 @@ end
 #reciept_total = game_one_total.to_s + extra_type_total.to_s
 
 #print reciept_total
+
+
 
 
